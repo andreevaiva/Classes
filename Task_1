@@ -1,0 +1,55 @@
+public class Main {
+    public static void main(String[] args) {
+        Person p1 = new Person("Iva", "i.andreeva26@acsbg.org", "0888888889", "17");
+        Person p2 = new Person("Siyana", "s.balakova26@acsbg.org", "0899898998", "17");
+        Person p3 = new Person("Ani", "a.alexandrova26@acsbg.org", "0878979876", "16");
+
+        p1.print();
+        System.out.println();
+        p2.print();
+        System.out.println();
+        p3.print();
+        System.out.println();
+
+        p3.updateEmail("siyanabalakova@gmail.com");
+        p3.print();
+    }
+}
+
+class Person{
+    private String name;
+    private String email;
+    private String phoneNumber;
+    private String age;
+
+    public Person(String name, String email, String phoneNumber, String age) {
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.age = age;
+    }
+
+    public void print() {
+        System.out.println("Name: "+name);
+        System.out.println("Email: "+email);
+        System.out.println("Phone: "+phoneNumber);
+        System.out.println("Age: "+age);
+    }
+
+    public String getName() {
+        return name;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    public String getAge() {
+        return age;
+    }
+
+    public void updateEmail(String newEmail) {
+        email = newEmail;
+    }
+}
